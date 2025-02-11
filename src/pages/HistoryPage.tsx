@@ -4,7 +4,7 @@ import { useAppSelector } from '../store/hooks';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import Button from '../components/common/Button';
 import { deleteCard, clearHistory } from '../store/weatherSlice';
-import { HistoryContainer, Title, CardsContainer, DeleteAllButton } from './HistoryPage.styles';
+import { HistoryContainer, Title, CardsContainer, DeleteAllButton, DeleteButton } from './HistoryPage.styles';
 
 function HistoryPage() {
   const dispatch = useDispatch();
