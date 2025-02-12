@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.openweathermap.org/data/2.5';
-const APP_ID = '67c15cd0b27a2183471b46f64ed213c1';
+const API_URL = import.meta.env.VITE_API_URL;
+const APP_ID = import.meta.env.VITE_APP_ID;
 
 interface WeatherResponse {
   name: string;
