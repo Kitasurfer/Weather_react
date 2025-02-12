@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
-import { Theme } from "../../styles/theme";
 
 interface InputStyleProps {
   $hasError?: boolean;
-  theme: Theme; 
 }
 
 export const Container = styled.div`
@@ -16,13 +14,12 @@ export const StyledInput = styled.input<InputStyleProps>`
   width: 570px;
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid
-    ${({ $hasError, theme }) => ($hasError ? theme.colors.error : "#ffffff")};
+  border: 1px solid ${({ $hasError }) => ($hasError ? "#ff4d4f" : "#ffffff")};
   border-radius: 40px;
   backdrop-filter: blur(8px);
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.text};
+  color: #ffffff;
   transition: all 0.3s ease;
 
   &::placeholder {
@@ -31,7 +28,7 @@ export const StyledInput = styled.input<InputStyleProps>`
 
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.colors.primary};
+    border-color: #3678b4;
     box-shadow: 0 0 0 3px rgba(54, 120, 180, 0.3);
   }
 
@@ -41,8 +38,8 @@ export const StyledInput = styled.input<InputStyleProps>`
   }
 `;
 
-export const ErrorMessage = styled.span<{ theme: Theme }>` 
-  color: ${({ theme }) => theme.colors.error};
+export const ErrorMessage = styled.span`
+  color: #ff4d4f;
   font-size: 14px;
   margin-top: 4px;
 `;

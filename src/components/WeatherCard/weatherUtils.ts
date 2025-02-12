@@ -9,7 +9,7 @@ export function getWeatherIconUrl(icon: string, fallbackIcon = DEFAULT_WEATHER_I
     const iconPath = `${WEATHER_ICON_BASE_URL}/${cleanIcon}@4x.png`;
     return iconPath;
   } catch (error) {
-    console.error('Ошибка при формировании пути к иконке:', error);
+    console.error('Error when forming path to icon:', error);
     return `${WEATHER_ICON_BASE_URL}/${fallbackIcon}`;
   }
 }

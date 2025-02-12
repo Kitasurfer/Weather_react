@@ -1,4 +1,3 @@
-import React from "react"
 import { Container, StyledInput, ErrorMessage } from "./Input.styles"
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -8,8 +7,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 function Input({ error, ...props }: InputProps) {
   return (
     <Container>
-      <StyledInput theme={undefined} {...props} $hasError={!!error} />
-      {error && <ErrorMessage theme={undefined}>{error}</ErrorMessage>}
+      <StyledInput {...props} $hasError={!!error} />
+      {error && <ErrorMessage>{error}</ErrorMessage>}
     </Container>
   )
 }

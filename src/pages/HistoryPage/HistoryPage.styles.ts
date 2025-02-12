@@ -1,11 +1,14 @@
-
 import styled from '@emotion/styled';
 
 export const HistoryContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(0deg, rgba(29, 32, 45, 0.3), rgba(29, 32, 45, 0.3)),
+  background: linear-gradient(
+      0deg,
+      rgba(29, 32, 45, 0.3),
+      rgba(29, 32, 45, 0.3)
+    ),
     url('./background.jpg') no-repeat center center;
   background-size: cover;
   padding-top: 10px;
@@ -43,6 +46,7 @@ export const CardsContainer = styled.div`
     border-radius: 4px;
   }
 `;
+
 export const NoDataMessage = styled.p`
   color: #ffffff;
   margin-top: 20px;
@@ -53,6 +57,7 @@ export const NoDataMessage = styled.p`
 
 export const DeleteAllButton = styled.div`
   margin-top: 20px;
+
   button {
     background: rgba(81, 120, 177);
     color: white;

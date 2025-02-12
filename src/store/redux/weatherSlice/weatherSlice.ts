@@ -1,18 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-export interface WeatherCardData {
-  id: string;
-  cityName: string;
-  temperature: number;
-  description: string;
-  icon: string;
-  timestamp: number;
-}
-
-interface WeatherState {
-  cards: WeatherCardData[];
-  error: string | null;
-}
+import { WeatherCardData, WeatherState } from './types';
 
 const initialState: WeatherState = {
   cards: [],
@@ -41,7 +28,6 @@ export const weatherSlice = createSlice({
       state.cards = [];
     },
     setError: (state, action: PayloadAction<string | null>) => {
-      console.log('Setting error:', action.payload);
       state.error = action.payload;
     },
   },

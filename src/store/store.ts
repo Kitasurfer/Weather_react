@@ -2,7 +2,7 @@ import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from '@reduxjs/toolkit';
-import weatherReducer from './weatherSlice';
+import weatherReducer from './redux/weatherSlice/weatherSlice';
 
 const rootReducer = combineReducers({
   weather: weatherReducer

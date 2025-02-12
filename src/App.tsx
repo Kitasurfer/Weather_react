@@ -6,8 +6,8 @@ import { store, persistor } from './store/store';
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './styles/theme';
 import Navigation from './components/Navigation/Navigation';
-import HomePage from './pages/HomePage';
-import HistoryPage from './pages/HistoryPage';
+import HomePage from './pages/HomePage/HomePage';
+import HistoryPage from './pages/HistoryPage/HistoryPage';
 
 function App() {
   return (
