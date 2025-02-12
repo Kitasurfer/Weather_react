@@ -1,19 +1,18 @@
-// HomePage.styles.ts
+// src/pages/HomePage/styles.ts
+
 import styled from '@emotion/styled';
 
-// Корневой контейнер страницы
-export const HomeContainer = styled('section')`
+export const HomeContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 80px); /* Учёт высоты шапки */
+  min-height: calc(100vh - 80px);
   padding: 20px;
   text-align: center;
 `;
 
-// Контейнер для поиска
-export const SearchContainer = styled('div')`
+export const SearchContainer = styled.div`
   position: relative;
   display: flex;
   gap: 14px;
@@ -24,8 +23,7 @@ export const SearchContainer = styled('div')`
   margin: 20px 0;
 `;
 
-// Сообщение об ошибке
-export const ErrorMessage = styled('div')`
+export const ErrorMessage = styled.div`
   color: red;
   margin-top: 10px;
   font-size: 16px;

@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from '@reduxjs/toolkit';
-import weatherReducer from './weatherSlice';
+import weatherReducer from './redux/weatherSlice/weatherSlice';
 
 const rootReducer = combineReducers({
   weather: weatherReducer
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['weather'] // Только weather будет сохраняться в localStorage
+  whitelist: ['weather'] 
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -20,7 +20,7 @@ export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false // Отключаем проверку сериализации для redux-persist
+      serializableCheck: false 
     })
 });
 

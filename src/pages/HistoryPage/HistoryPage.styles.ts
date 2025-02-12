@@ -4,7 +4,11 @@ export const HistoryContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(0deg, rgba(29, 32, 45, 0.3), rgba(29, 32, 45, 0.3)),
+  background: linear-gradient(
+      0deg,
+      rgba(29, 32, 45, 0.3),
+      rgba(29, 32, 45, 0.3)
+    ),
     url('./background.jpg') no-repeat center center;
   background-size: cover;
   padding-top: 10px;
@@ -43,8 +47,17 @@ export const CardsContainer = styled.div`
   }
 `;
 
+export const NoDataMessage = styled.p`
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+`;
+
 export const DeleteAllButton = styled.div`
   margin-top: 20px;
+
   button {
     background: rgba(81, 120, 177);
     color: white;
@@ -57,38 +70,5 @@ export const DeleteAllButton = styled.div`
     &:hover {
       background: rgba(81, 120, 198);
     }
-  }
-`;
-
-export const DeleteButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 24px;
-  height: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  z-index: 10;
-
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 16px;
-    background-color: white;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before, &:hover::after {
-    background-color: #ff4444;
   }
 `;
