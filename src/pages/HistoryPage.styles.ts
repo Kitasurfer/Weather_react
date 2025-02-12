@@ -1,3 +1,4 @@
+
 import styled from '@emotion/styled';
 
 export const HistoryContainer = styled.section`
@@ -42,6 +43,13 @@ export const CardsContainer = styled.div`
     border-radius: 4px;
   }
 `;
+export const NoDataMessage = styled.p`
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+`;
 
 export const DeleteAllButton = styled.div`
   margin-top: 20px;
@@ -57,38 +65,5 @@ export const DeleteAllButton = styled.div`
     &:hover {
       background: rgba(81, 120, 198);
     }
-  }
-`;
-
-export const DeleteButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 24px;
-  height: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  z-index: 10;
-
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 16px;
-    background-color: white;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before, &:hover::after {
-    background-color: #ff4444;
   }
 `;

@@ -54,45 +54,38 @@ export const RightSection = styled.div`
   width: 200px;
 `;
 
+export const TemperatureContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const Temperature = styled.div`
-  font-size: 57px;
-  line-height: 68.98px;
+  font-size: 76px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+`;
+
+export const CityName = styled.div`
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -20px;
 `;
 
 export const WeatherIcon = styled.img`
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  z-index: 1;
-`;
-
-export const CityName = styled.h2`
-  font-size: 24px;
-  line-height: 29.05px;
-  font-weight: 400;
-  margin: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 `;
 
 export const Description = styled.div`
-  font-size: 18px;
-  line-height: 21.78px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 38px;
+  color: #666;
 `;
 
 export const Timestamp = styled.div`
   font-size: 18px;
-  line-height: 21.78px;
-  font-weight: 400;
-  opacity: 0.6;
-`;
-
-export const CardActions = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: #999;
 `;
 
 export const ErrorMessage = styled.div`

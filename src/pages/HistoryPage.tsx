@@ -1,10 +1,9 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../store/hooks';
 import WeatherCard from '../components/WeatherCard/WeatherCard';
 import Button from '../components/common/Button';
 import { deleteCard, clearHistory } from '../store/weatherSlice';
-import { HistoryContainer, Title, CardsContainer, DeleteAllButton, DeleteButton } from './HistoryPage.styles';
+import { HistoryContainer, Title, CardsContainer, DeleteAllButton, DeleteButton, NoDataMessage } from './HistoryPage.styles';
 
 function HistoryPage() {
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ function HistoryPage() {
     <HistoryContainer>
       <Title>Weather History</Title>
       {cards.length === 0 ? (
-        <p>No weather data available.</p>
+        <NoDataMessage>No weather data available.</NoDataMessage>
       ) : (
         <>
           <CardsContainer>

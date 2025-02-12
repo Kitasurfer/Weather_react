@@ -1,7 +1,9 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
+import { Theme } from "../../styles/theme";
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?: "primary" | "secondary" | "danger";
+  theme: Theme;
 }
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -19,12 +21,12 @@ export const StyledButton = styled.button<ButtonProps>`
 
   background: ${({ variant, theme }) => {
     switch (variant) {
-      case 'secondary':
-        return `linear-gradient(270deg, ${theme.colors.secondary} 0%, ${theme.colors.secondary} 100%)`;
-      case 'danger':
-        return theme.colors.error;
+      case "secondary":
+        return `linear-gradient(270deg, ${theme.colors.secondary} 0%, ${theme.colors.secondary} 100%)`
+      case "danger":
+        return theme.colors.error
       default:
-        return `linear-gradient(270deg, ${theme.colors.primary} 0%, ${theme.colors.primary} 100%)`;
+        return `linear-gradient(270deg, ${theme.colors.primary} 0%, ${theme.colors.primary} 100%)`
     }
   }};
 

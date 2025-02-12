@@ -1,5 +1,4 @@
-// HomePage.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchWeather } from '../api/weatherApi';
 import { addCard, setError } from '../store/weatherSlice';

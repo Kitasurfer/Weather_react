@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   CardWrapper,
   DeleteButton,
@@ -12,6 +11,8 @@ import {
   Timestamp,
   ErrorMessage
 } from './styles';
+import { getWeatherIconUrl, formatTimestamp, parseErrorMessage } from './weatherUtils';
+import WeatherIconComponent from './WeatherIconComponent';
 
 interface WeatherCardProps {
   cityName: string;
@@ -32,26 +33,6 @@ function WeatherCard({
   error,
   onDelete
 }: WeatherCardProps) {
-  console.log('Weather icon code:', icon);
-  console.log('Full icon URL:', `https://openweathermap.org/img/wn/${icon}@2x.png`);
-  const parseErrorMessage = (errorText: string) => {
-    const parts = errorText.split('-');
-    return parts.length > 1 
-      ? { apiError: parts[0].trim(), details: parts[1].trim() }
-      : { apiError: errorText, details: '' };
-  };
-
-  const formatTimestamp = (timestamp: number) => {
-    const date = new Date(timestamp * 1000);
-    return date.toLocaleString('ru-RU', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).replace(',', ' ');
-  };
-
   const errorParts = error ? parseErrorMessage(error) : null;
 
   return (
@@ -83,15 +64,7 @@ function WeatherCard({
             <Timestamp>Обновлено: {formatTimestamp(timestamp)}</Timestamp>
           </CenterSection>
           <RightSection>
-            {icon && (
-              <WeatherIcon 
-                src={`https://openweathermap.org/img/wn/${icon.replace('n', 'd')}@2x.png`} 
-                alt={`Weather icon for ${cityName}`} 
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://openweathermap.org/img/wn/01d@2x.png';
-                }}
-              />
-            )}
+            <WeatherIconComponent icon={icon} cityName={cityName} />
           </RightSection>
         </>
       )}

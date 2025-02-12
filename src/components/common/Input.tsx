@@ -1,20 +1,17 @@
-import React from 'react';
-import { StyledInput } from './Input.styles';
+import React from "react"
+import { Container, StyledInput, ErrorMessage } from "./Input.styles"
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: string;
+  error?: string
 }
 
-const Input: React.FC<InputProps> = ({ error, ...props }) => {
+function Input({ error, ...props }: InputProps) {
   return (
-    <div>
-      <StyledInput 
-        {...props} 
-        $hasError={!!error}
-      />
-      {error && <span>{error}</span>}
-    </div>
-  );
-};
+    <Container>
+      <StyledInput theme={undefined} {...props} $hasError={!!error} />
+      {error && <ErrorMessage theme={undefined}>{error}</ErrorMessage>}
+    </Container>
+  )
+}
 
-export default Input;
+export default Input
