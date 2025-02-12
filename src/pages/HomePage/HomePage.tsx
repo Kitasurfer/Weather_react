@@ -1,5 +1,3 @@
-// src/pages/HomePage/HomePage.tsx
-
 import React, { useState, ChangeEvent, KeyboardEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchWeather } from '../../api/weatherApi';

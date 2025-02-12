@@ -1,4 +1,3 @@
-
 import { NavContainer, NavLink, Logo } from "./styles";
 
 function Navigation() {

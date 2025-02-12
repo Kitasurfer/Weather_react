@@ -1,5 +1,3 @@
-// src/pages/HomePage/styles.ts
-
 import styled from '@emotion/styled';
 
 export const HomeContainer = styled.section`

@@ -1,5 +1,3 @@
-// src/pages/HistoryPage/types.ts
-
 export interface WeatherCardData {
   id: string;
   cityName: string;

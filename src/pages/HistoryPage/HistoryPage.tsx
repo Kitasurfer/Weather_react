@@ -1,6 +1,3 @@
-// src/pages/HistoryPage/HistoryPage.tsx
-
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../store/hooks';
 import WeatherCard from '../../components/WeatherCard/WeatherCard';
